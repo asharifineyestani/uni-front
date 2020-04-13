@@ -1,5 +1,6 @@
 @import 'assets/css/fonts.scss';
 @import 'assets/css/colors.scss';
+@import 'assets/css/buttons.scss';
 
 // Basic
 *,
@@ -56,5 +57,7 @@ a:hover {
     color: $primary;
 }
 .app-header .button {
+    top: 21px;
     float: left;
+    position: relative;
 }
