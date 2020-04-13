@@ -1,10 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
+import Header from './components/Header'
 import './app.scss'
 
 function App() {
   return (
-    <div>
-    </div>
+    <Router>
+      <Header />
+    </Router>
   );
 }
 
