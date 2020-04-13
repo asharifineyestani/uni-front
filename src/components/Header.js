@@ -17,7 +17,7 @@ const Menu = () => (
     <nav className="menu">
         <ul>
             <MenuItem to="/" title="برگ نخست" active={true} />
-            <MenuItem to="/blog" title="آخرین نوشته ها" />
+            <MenuItem to="/posts" title="آخرین نوشته ها" />
             <MenuItem to="/requests" title="درخواست ها" />
             <MenuItem to="/portfolios" title="تماس با ما" />
         </ul>

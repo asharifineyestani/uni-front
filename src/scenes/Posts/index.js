@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-grid-system'
-import Card from '../components/Card'
+import Card from '../../components/Card'
 
-export default () => {
+function Posts(props) {
     return (
         <section className="section section-blog">
             <Container>
@@ -23,3 +23,5 @@ export default () => {
         </section>
     )
 }
+
+export default Posts;
