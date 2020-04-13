@@ -7,6 +7,7 @@ export default () => {
         <header className="app-header">
             <Container>
                 <Menu />
+                <Auth />
             </Container>
         </header>
     )
@@ -32,4 +33,16 @@ const MenuItem = (props) => {
             </li>
         )} />
     );
+}
+
+const Auth = () => {
+
+    let title = "نام نویسی / ورود به سایت";
+    let to = "login";
+
+    return (
+        <button className="button button-sm button-radius button-primary">
+            <Link to={to}>{title}</Link>
+        </button>
+    )
 }
