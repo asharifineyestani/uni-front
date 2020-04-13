@@ -1,5 +1,14 @@
+@import 'assets/css/fonts.scss';
+
 // Basic
 body {
     margin: 0;
     overflow-x: hidden;
+}
+
+// Typography
+body {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: iranyekan, sans-serif;
 }
