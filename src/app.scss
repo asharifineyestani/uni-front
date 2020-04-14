@@ -44,14 +44,32 @@ h6 {
 // Helpers
 .text-center {
     text-align: center;
-  }
-  
+}  
 .div-center {
     float: none !important;
     display: block !important;
     position: relative !important;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+// Form
+.form-div {
+    margin-bottom: 15px;
+}
+.form-div input[type=email], .form-div input[type=password], .form-div input[type=text], .form-div select, .form-div textarea {
+    width: 100%;
+    height: 48px;
+    color: #000;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    -webkit-transition: all .45s;
+    transition: all .45s;
+    font-family: iranyekan,sans-serif!important;
 }
 
 // Timeline

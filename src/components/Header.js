@@ -19,7 +19,7 @@ const Menu = () => (
             <MenuItem to="/" title="برگ نخست" active={true} />
             <MenuItem to="/posts" title="آخرین نوشته ها" />
             <MenuItem to="/requests" title="درخواست ها" />
-            <MenuItem to="/portfolios" title="تماس با ما" />
+            <MenuItem to="/contact" title="تماس با ما" />
         </ul>
     </nav>
 )
@@ -36,10 +36,8 @@ const MenuItem = (props) => {
 }
 
 const Auth = () => {
-
+    let to = "sign-up";
     let title = "نام نویسی / ورود به سایت";
-    let to = "login";
-
     return (
         <button className="button button-sm button-radius button-primary">
             <Link to={to}>{title}</Link>
