@@ -19,7 +19,7 @@ function App() {
                     <Route path="/posts" exact>
                         <Posts />
                     </Route>
-                    <Route path="/posts/:id" exact>
+                    <Route path="/posts/:slug" exact>
                         <Post />
                     </Route>
                     <Route path="/sign-up" exact>

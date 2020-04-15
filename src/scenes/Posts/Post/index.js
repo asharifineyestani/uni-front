@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import moment from 'moment-jalaali'
+import { useParams } from 'react-router-dom'
 import Heading from '../../../components/Heading'
 import Content from '../../../components/Content'
+import api from '../../../api'
 
 const Post = (props) => {
+    let { slug } = useParams();
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios.get(`${api}/posts/${slug}`);
+            setData(result.data.data);
+        };
+        fetchData();
+    }, []);
+
     return (
-        <div>
+        <div className="section section-post">
             <Content>
-                <Heading title="معرفی شرکت برنامه نویسی افـراکـد" subtitle="با بیش از 7 سال سابقه درخشان در عرصه اپلیکیش نویسی" />
+                <Heading title={data.title}/>
                 <div className="post-content">
-                    <p>دکتر مرتضی محسنی از تداوم کلاسهای نظری ترم تحصیلی جاری به صورت الکترونیکی خبر داد  و گفت: از ۱۶ فروردین کلیه کلاسهای آموزشی دانشجویان کماکان به صورت الکترونیکی در سراسر کشور برگزار و برنامه کلاسها توسط ستادهای استانی دانشگاه پیام نور به دانشجویان اطلاع رسانی می شود.</p>
-                    <p>به گزارش روابط عمومی، معاون آموزشی و تحصیلات تکمیلی با عنوان اینکه دانشگاه پیام نور به عنوان تنها دانشگاه دولتی متولی آموزش مجازی در کشور از زیرساختهای قابل قبولی در این زمینه برخوردار است،افزود: این دانشگاه به شیوه آموزش ترکیبی فعالیت می کند و با توجه به عدم الزام حضور در کلاس های رفع اشکال دروس نظری، حذف نیمسال تحصیلی در دانشگاه پیام نور امکان پذیر نیست و اکنون که در شرایط بحرانی شیوع بیشتر بیماری کرونا هستیم،کلیه خدمات آموزشی به صورت کاملا الکترونیکی ارائه خواهد شد. وی اذعان داشت: موارد خاص غیر مرتبط با الکترونیکی شدن کلاس‌های دروس؛ مانند حوادث، کادر متولی درمان بیماران کرونا، بیماری و امثال آن، مطابق روال معمول و طبق مقررات مربوط قابل بررسی است.  </p>
+                    <p>{data.body}</p>
                 </div>
             </Content>
         </div>

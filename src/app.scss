@@ -41,6 +41,18 @@ h6 {
     margin: inherit;
 }
 
+/*------------------------------------
+Reset Bootstrap
+------------------------------------*/
+.row-sm {
+    margin-left: -9px !important;
+    margin-right: -9px !important;
+}
+.row-sm > * {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+}
+
 // Helpers
 .text-center {
     text-align: center;

@@ -9,6 +9,7 @@ Buttons
   white-space: nowrap;
   display: inline-block;
   margin-right: 2px;
+  border-radius: 3px;
   border: 0;
 }
 
