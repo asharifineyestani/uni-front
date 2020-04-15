@@ -13,23 +13,23 @@ function App() {
     return (
         <Router>
             <Header />
-            <div className="app-wrapper" exact>
+            <div className="app-wrapper">
                 <Route path="/posts">
                     <Posts />
                 </Route>
-                <Route path="/posts/:id" exact>
+                <Route path="/posts/:id">
                     <Post />
                 </Route>
                 <Route path="/requests">
                     <Requests />
                 </Route>
-                <Route path="/requests/:id" exact>
+                <Route path="/requests/:id">
                     <Request />
                 </Route>
-                <Route path="/sign-up" exact>
+                <Route path="/sign-up">
                     <SignUp />
                 </Route>
-                <Route path="/sign-in" exact>
+                <Route path="/sign-in">
                     <SignIn />
                 </Route>
             </div>

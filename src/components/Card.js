@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default (props) => {
-    const { title, subtitle } = props
+export default ({post}) => {
+    const { title, body } = post
     return (
         <div className="card">
             <div className="card-date">
@@ -10,7 +10,7 @@ export default (props) => {
             </div>
             <div className="card-body">
                 <h3>{title}</h3>
-                <p>{subtitle}</p>
+                <p>{body}</p>
                 <button className="button button-sm">ادامه مطلب</button>
             </div>
         </div>
