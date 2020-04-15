@@ -1,17 +1,23 @@
 import React from 'react'
+import moment from 'moment-jalaali'
+import { Link } from 'react-router-dom'
 
-export default ({post}) => {
-    const { title, body } = post
+export default (props) => {
+    const { title, body, slug, created_at } = props
+
+
+    console.log(created_at)
     return (
         <div className="card">
             <div className="card-date">
-                <span>پنجشنبه</span>
-                <span> 1399/1/21</span>
+                <span>نوشته شده در تاریخ {moment(created_at).format('jYYYY/jM/jD')}</span>
             </div>
             <div className="card-body">
-                <h3>{title}</h3>
+                <h3><Link to={slug}>{title}</Link></h3>
                 <p>{body}</p>
-                <button className="button button-sm">ادامه مطلب</button>
+                <button className="button button-sm">
+                    <Link to={slug}>ادامه مطلب</Link>
+                </button>
             </div>
         </div>
     )

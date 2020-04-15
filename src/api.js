@@ -1,3 +1,1 @@
-let api = 'http://uni.afracode.com/api/v1/';
-
-export default api
+export default 'http://uni.afracode.com/api/v1'

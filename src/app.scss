@@ -72,6 +72,18 @@ h6 {
     font-family: iranyekan,sans-serif!important;
 }
 
+// Alerts
+.alert {
+    text-align: center;
+    padding: 30px;
+}
+.alert.loading {
+    color: orange;
+}
+alert.error {
+    color: red
+}
+
 // Timeline
 .timeline {
     padding-top: 9px;
