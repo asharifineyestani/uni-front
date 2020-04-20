@@ -5,18 +5,16 @@ import Heading from '../../components/Heading'
 import Content from '../../components/Content'
 import api from '../../api'
 
-const SignIn = () => {
+const SignIn = (props) => {
 
     const [data, setData] = useState({});
 
     const handleSubmit = (e) => {
         e.preventDefault()
         let form = {}
-        let name = e.target.name.value;
         let mobile = e.target.mobile.value;
         let password = e.target.password.value;
 
-        form.name = name
         form.mobile = mobile
         form.password = password
 
@@ -24,7 +22,7 @@ const SignIn = () => {
 
         setData(formData)
 
-        axios.post(`${api}/auth/register`, formData)
+        axios.post(`${api}/auth/login`, form)
             .then(result => {
                 console.log(result);
                 console.log(result.data);
@@ -33,6 +31,7 @@ const SignIn = () => {
 
     return (
         <section className="section section-auth">
+            {console.log(data)}
             <Content>
                 <Heading title="ورود به سایت" subtitle="با بیش از 7 سال سابقه درخشان در عرصه اپلیکیش نویسی" />
                 <form className="form" onSubmit={handleSubmit}>

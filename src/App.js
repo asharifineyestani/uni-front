@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute';
 import { AuthContext } from "./context/auth";
@@ -10,8 +10,16 @@ import SignIn from './scenes/Auth/SignIn'
 import './app.scss'
 
 function App() {
+
+    const [authTokens, setAuthTokens] = useState();
+
+    const setTokens = (data) => {
+        localStorage.setItem("tokens", JSON.stringify(data));
+        setAuthTokens(data);
+    }
+
     return (
-        <AuthContext.Provider value={false}>
+        <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
             <Router>
                 <Header />
                 <div className="app-wrapper">
